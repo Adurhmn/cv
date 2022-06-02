@@ -1,0 +1,41 @@
+@use "mixin" as m;
+
+html {
+  font-size: 62.5%; //for development
+  box-sizing: border-box;
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+
+  // font-size: 68%; //for deployment
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+// Media Queries
+@include m.pc {
+  html {
+    font-size: 52%;
+  }
+}
+
+@include m.tab {
+  html {
+    font-size: 50%;
+  }
+}
